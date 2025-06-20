@@ -149,7 +149,7 @@ func (p *Pool) Run(){
                 }
 
                 idle = true
-                timer.Reset(time.Millisecond*100)
+                timer.Reset(idle_timer)
             case data,ok:=<-p.task:
                 if !ok{
                     fmt.Printf("关闭,退出")
